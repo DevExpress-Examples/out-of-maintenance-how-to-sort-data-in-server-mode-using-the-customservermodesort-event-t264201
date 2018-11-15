@@ -1,3 +1,8 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [MainWindow.xaml.cs](./CS/WPFPivotGridCustomServerModeSort/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](./VB/WPFPivotGridCustomServerModeSort/MainWindow.xaml.vb))
+<!-- default file list end -->
 # How to sort data in server mode using the CustomServerModeSort event
 
 
