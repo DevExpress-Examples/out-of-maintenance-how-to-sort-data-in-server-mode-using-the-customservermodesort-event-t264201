@@ -13,17 +13,28 @@
         <dxpg:PivotGridControl Name="pivotGridControl1" DataSource="{Binding Path=Data, Source={StaticResource EntityServerModeDataSource}}" CustomServerModeSort="pivotGridControl1_CustomServerModeSort">
             <dxpg:PivotGridControl.Fields>
                 <dxpg:PivotGridField Name="fieldOrderMonth" Area="ColumnArea" AreaIndex="1" 
-                    Caption="Month" FieldName="OrderDate" GroupInterval="DateMonth" 
-                    UnboundFieldName="fieldOrderMonth">
-                    </dxpg:PivotGridField>
+                    Caption="Month">
+                    <dxpg:PivotGridField.DataBinding>
+                        <dxpg:DataSourceColumnBinding ColumnName="OrderDate" GroupInterval="DateMonth"/>
+                    </dxpg:PivotGridField.DataBinding>
+                </dxpg:PivotGridField>
                 <dxpg:PivotGridField Name="fieldPrice" Area="DataArea" AreaIndex="0" 
-                    Caption="Price" FieldName="Extended_Price">
+                    Caption="Price">
+                    <dxpg:PivotGridField.DataBinding>
+                        <dxpg:DataSourceColumnBinding ColumnName="Extended_Price"/>
+                    </dxpg:PivotGridField.DataBinding>
                 </dxpg:PivotGridField>
                 <dxpg:PivotGridField Name="fieldOrderYear" Area="ColumnArea" AreaIndex="0" 
-                Caption="Year" FieldName="OrderDate" GroupInterval="DateYear" UnboundFieldName="field">
+                Caption="Year">
+                    <dxpg:PivotGridField.DataBinding>
+                        <dxpg:DataSourceColumnBinding ColumnName="OrderDate" GroupInterval="DateYear"/>
+                    </dxpg:PivotGridField.DataBinding>
                 </dxpg:PivotGridField>
                 <dxpg:PivotGridField Name="fieldCategoryName" Area="RowArea" AreaIndex="0" 
-                FieldName="CategoryName" Caption="Category" >
+                Caption="Category" >
+                    <dxpg:PivotGridField.DataBinding>
+                        <dxpg:DataSourceColumnBinding ColumnName="CategoryName"/>
+                    </dxpg:PivotGridField.DataBinding>
                 </dxpg:PivotGridField>
             </dxpg:PivotGridControl.Fields>
         </dxpg:PivotGridControl>
